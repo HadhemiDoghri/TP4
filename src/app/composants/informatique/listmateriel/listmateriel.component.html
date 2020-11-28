@@ -1,8 +1,11 @@
-<h2>Nos produits en informatique</h2>
-<ul>
+<h2 class="text-center pt-3">Nos produits en informatique</h2>
+<br>
+<div class="container">
+    <div class="row">
     <ng-container *ngFor="let M of materiels">
-    <li *ngIf="M.quantite >0">
+    <div class="col-4" *ngIf="M.quantite >0">
         <had-materiel [m]="M" ></had-materiel>
-    </li> 
+    </div> 
 </ng-container>
-</ul>
+</div>
+</div>
