@@ -2,10 +2,7 @@
 <ul>
     <ng-container *ngFor="let M of materiels">
     <li *ngIf="M.quantite >0">
-         <img [src]="M.photo" alt="pic">{{M.libelle|titlecase}}
-         <span class="badge badge-pill badge-primary" [ngClass]="{'badge-primary':M.hautGamme,'badge-dark':!M.hautGamme}">Prix: {{M.prix}} DT 
-         <i [ngClass]="{'fa fa-thumbs-up':M.hautGamme}"></i>
-        </span>
+        <had-materiel [m]="M" ></had-materiel>
     </li> 
 </ng-container>
 </ul>
