@@ -1,0 +1,10 @@
+<h1>Détails du "{{materiel.libelle}}" d'ID: {{materiel.id|titlecase}} </h1>
+<img [src]="materiel.photo" alt="pic">
+<ul class="list-group">
+<li class="list-group-item">marque: {{materiel.marque}} </li>
+<li class="list-group-item">pirx : {{materiel.prix}} </li>
+<li class="list-group-item">Description : {{materiel.description}} </li>
+<li class="list-group-item">Quantité : {{materiel.quantite}} </li>
+<li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme </li>
+<li class="list-group-item"><input type="button" value="Afficher les commentaires"></li>
+</ul>
