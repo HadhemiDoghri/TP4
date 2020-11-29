@@ -21,8 +21,12 @@ export class DetailmaterielComponent implements OnInit {
 {contenu:'Bon rapport qualité prix', note:4, auteur:'Samar Salah', date:new Date(
 2020,10,4)}]
 };
-  constructor() { }
-
+showing:boolean = true; 
+constructor() { }
+onshow()
+{
+  this.showing = !this.showing; 
+}
   ngOnInit(): void {
   }
 

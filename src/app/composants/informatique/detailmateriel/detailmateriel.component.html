@@ -6,5 +6,12 @@
 <li class="list-group-item">Description : {{materiel.description}} </li>
 <li class="list-group-item">Quantité : {{materiel.quantite}} </li>
 <li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme </li>
-<li class="list-group-item"><input type="button" value="Afficher les commentaires"></li>
+<button class="btn btn-primary" (click)="onshow()"> afficher les commentaires</button>
+<div *ngIf="!showing">
+    <h3> liste des commentaires </h3>
+<ng-container *ngFor="let c of det.commentaires ; index as i ">
+    <div class="alert alert-primary" role="alert"> commentaire n° {{i+1}}</div>
+<YES-comment [com] = "c"></YES-comment>
+</ng-container>
+</div>
 </ul>
