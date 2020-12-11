@@ -7,7 +7,7 @@ import { Commentaire } from 'src/app/models/commentaires';
   styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
-  @Input() C: Commentaire = new Commentaire();
+  @Input() C: Commentaire = new Commentaire() ;
   constructor() { }
 
   ngOnInit(): void {

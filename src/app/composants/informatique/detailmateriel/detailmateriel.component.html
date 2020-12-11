@@ -1,17 +1,17 @@
-<h1>Détails du "{{materiel.libelle}}" d'ID: {{materiel.id|titlecase}} </h1>
-<img [src]="materiel.photo" alt="pic">
+<h1>Détails du "{{materiels.libelle}}" d'ID: {{materiels.id|titlecase}} </h1>
+<img [src]="materiels.photo" alt="pic">
 <ul class="list-group">
-<li class="list-group-item">marque: {{materiel.marque}} </li>
-<li class="list-group-item">pirx : {{materiel.prix}} </li>
-<li class="list-group-item">Description : {{materiel.description}} </li>
-<li class="list-group-item">Quantité : {{materiel.quantite}} </li>
-<li class="list-group-item"><input type="checkbox" [checked]="materiel.hautGamme">Haut de Gamme </li>
+<li class="list-group-item">marque: {{materiels.marque}} </li>
+<li class="list-group-item">pirx : {{materiels.prix}} </li>
+<li class="list-group-item">Description : {{materiels.description}} </li>
+<li class="list-group-item">Quantité : {{materiels.quantite}} </li>
+<li class="list-group-item"><input type="checkbox" [checked]="materiels.hautGamme">Haut de Gamme </li>
 <button class="btn btn-primary" (click)="onshow()"> afficher les commentaires</button>
 <div *ngIf="!showing">
     <h3> liste des commentaires </h3>
-<ng-container *ngFor="let c of det.commentaires ; index as i ">
+<ng-container *ngFor="let c of materiels.commentaires ; index as i ">
     <div class="alert alert-primary" role="alert"> commentaire n° {{i+1}}</div>
-<YES-comment [com] = "c"></YES-comment>
+<had-comment [C]="c" ></had-comment>
 </ng-container>
 </div>
 </ul>
